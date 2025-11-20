@@ -1,2 +1,33 @@
-# smart-plant-monitor-pi
-A Raspberry Pi project that monitors soil moisture and sends email alerts. Built with Python and Blynk IoT.
+# Smart IoT Plant Monitor (Raspberry Pi) 
+
+##  About This Project
+I built this project for a class assignment to learn how to connect hardware sensors to the internet. 
+
+The goal was simple: build a device that watches my plant 24/7 and screams at me (via email) if it gets too dry. It uses a **Raspberry Pi** to read the sensors and connects to the **Blynk IoT Cloud** so I can check the status from my phone.
+
+## What It Does
+* **Monitors Soil:** Continuously checks if the plant has enough water.
+* **Visual Alerts:** If it's dry, a **Red LED** turns on and a **Buzzer** sounds.
+* **Email Notifications:** Sends me an email instantly if the moisture drops too low.
+* **Cloud Dashboard:** Syncs data to the Blynk app for remote monitoring.
+
+##  Tech Stack
+* **Hardware:** Raspberry Pi 4, Grove Moisture Sensor, Grove ADC, LEDs.
+* **Software:** Python 3.
+* **Libraries:** `BlynkLib`, `smtplib` (for Email), `gpiozero`.
+
+##  How to Run It
+1.  Clone this repository.
+2.  Install the required libraries:
+    ```bash
+    pip install blynklib gpiozero grove.py
+    ```
+3.  Update the `moisture_monitor` file with your own **Blynk Auth Token** and **Email Password**.
+4.  Run the script:
+    ```bash
+    python3 main.py
+    ```
+
+---
+### ⚠️ Important Note for Students
+**This code is uploaded for portfolio display purposes only.** If you are a student at **Red River College (RRC)** or another institution, please **do not copy or submit this code** for your own assignments. This repository is public to demonstrate my skills to potential employers, not to provide a shortcut for schoolwork. Plagiarism is taken seriously—please write your own code!
